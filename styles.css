@@ -1,0 +1,550 @@
+@font-face {
+    font-family: 'PP Neue Machina';
+    src: url('/fonts/PPNeueMachina-InktrapRegular.woff2') format('woff2'),
+         url('/fonts/PPNeueMachina-InktrapRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Neue Machina';
+    src: url('/fonts/PPNeueMachina-InktrapMedium.woff2') format('woff2'),
+         url('/fonts/PPNeueMachina-InktrapMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Neue Machina';
+    src: url('/fonts/PPNeueMachina-InktrapUltrabold.woff2') format('woff2'),
+         url('/fonts/PPNeueMachina-InktrapUltrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    background-color: #0A0A0A;
+    color: white;
+
+}
+
+section {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 1.2;
+    font-family: 'PP Neue Machina', sans-serif;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: 'PP Neue Machina', sans-serif;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    color: #A3A3A3;
+    margin-bottom: 16px;
+}
+
+button {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 12px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button svg {
+    fill: currentColor;
+    transition: transform 0.2s ease;
+}
+
+button:hover svg {
+    transform: translateX(4px);
+}
+
+.button-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.button-secondary:active {
+    transform: scale(0.97);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+section {
+    margin-top: 164px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Row container */
+.image-grid-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: 380px; /* Updated from 300px */
+}
+
+.image-grid img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+/* First row */
+.image-grid-row:nth-child(1) {
+    height: 380px; /* Updated from 300px */
+}
+
+.image-grid-row:nth-child(1) img:first-child {
+    width: 70%;
+}
+
+.image-grid-row:nth-child(1) img:last-child {
+    width: 30%;
+}
+
+/* Second row */
+.image-grid-row:nth-child(2) img {
+    width: 50%;
+}
+
+/* Third row */
+.image-grid-row:nth-child(3) img {
+    width: 50%;
+}
+
+.image-grid img:hover {
+    transform: scale(1.02);
+}
+
+.timeline {
+    position: relative;
+    width: 70%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, 
+        #0066E5 0%,    /* Disney ET */
+        #0066E5 25%,   
+        #18191b 25%,   /* Disney Streaming */
+        #18191b 50%,   
+        #FF3008 50%,   /* DoorDash */
+        #FF3008 75%,   
+        #6B4BFF 75%,   /* Odopod */
+        #6B4BFF 100%
+    );
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 50%);
+    mask-size: 2px 20px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 50%);
+    -webkit-mask-size: 2px 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 40px;
+}
+
+.timeline-item-logo {
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 2px solid black;
+}
+
+.timeline-item-logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.timeline-item-logo img {
+    width: 30px;
+    height: 30px;
+}     
+
+.timeline-item-content {
+    flex: 1;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.values-carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.values-carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 16px;
+    width: 300px;
+    height: 480px;
+    background: #18191b;
+    border-radius: 12px;
+    padding: 24px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.values-carousel-item .values-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.values-carousel-item .values-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.values-carousel-item p {
+    position: relative;
+    z-index: 3;
+}
+
+.values-carousel-item h3 {
+    position: relative;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: 'PP Neue Machina', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #2B2B2B;
+    text-stroke: 1px #2B2B2B;
+    margin: 0;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.values-button {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 4;
+}
+
+/* Hover states */
+.values-carousel-item:hover {
+    background: black;
+}
+
+.values-carousel-item:hover .values-bg {
+    opacity: 1;
+}
+
+.values-carousel-item:hover .values-overlay {
+    opacity: 1;
+}
+
+.values-carousel-item:hover h3 {
+    color: white;
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+}
+
+.values-carousel-item:hover .values-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.values-button:hover {
+    transform: scale(1.1);
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 40px 0;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 40%;
+    gap: 16px;
+}
+
+.image-stack {
+    flex-shrink: 0;
+    position: relative;
+    width: 300px;  /* adjust based on your needs */
+    height: 400px; /* adjust based on your needs */
+}
+
+.image-stack img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Position each image in the stack */
+.image-stack img:nth-child(1) {
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+.image-stack img:nth-child(2) {
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.image-stack img:nth-child(3) {
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+/* Optional: Add hover effect */
+.image-stack:hover img:nth-child(1) {
+    transform: rotate(8deg) translateY(-10px);
+}
+
+.image-stack:hover img:nth-child(2) {
+    transform: rotate(-6deg) translateY(-5px);
+}
+
+.image-stack:hover img:nth-child(3) {
+    transform: rotate(0deg) translateY(-15px);
+}
+
+/* Add custom colors for each timeline item */
+.timeline-item:nth-child(1) .timeline-item-logo {
+    background: #0066E5; /* Disney blue */
+}
+
+.timeline-item:nth-child(2) .timeline-item-logo {
+    background: #1E1E1E; /* Disney grey */
+}
+
+.timeline-item:nth-child(3) .timeline-item-logo {
+    background: #FF3008; /* DoorDash red */
+}
+
+.timeline-item:nth-child(4) .timeline-item-logo {
+    background: linear-gradient(to bottom, #FF834F, #FB4D55);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 164px;
+}
+
+.contact-content {
+    flex: 1;
+    max-width: 40%;
+}
+
+.contact-image {
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #18191b;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px); /* Center horizontally + initial Y offset */
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.navbar.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Center horizontally + no Y offset */
+    pointer-events: all;
+}
+
+.navbar-content {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content; /* Make it fit content */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-family: 'PP Neue Machina', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+/* Update button styles for navbar */
+.navbar .button-secondary {
+    padding: 8px 16px;
+    font-size: 14px;
+}
