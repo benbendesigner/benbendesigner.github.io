@@ -1,24 +1,7 @@
 @font-face {
-    font-family: 'PP Neue Machina';
-    src: url('/fonts/PPNeueMachina-InktrapRegular.woff2') format('woff2'),
-         url('/fonts/PPNeueMachina-InktrapRegular.woff') format('woff');
+    font-family: 'Safiro';
+    src: url('./public/fonts/safiro-medium-webfont.woff2') format('woff2');
     font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PP Neue Machina';
-    src: url('/fonts/PPNeueMachina-InktrapMedium.woff2') format('woff2'),
-         url('/fonts/PPNeueMachina-InktrapMedium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PP Neue Machina';
-    src: url('/fonts/PPNeueMachina-InktrapUltrabold.woff2') format('woff2'),
-         url('/fonts/PPNeueMachina-InktrapUltrabold.woff') format('woff');
-    font-weight: 800;
     font-style: normal;
 }
 
@@ -32,15 +15,14 @@ section {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     box-sizing: border-box;
 }
 
 h1 {
     color: white;
-    font-size: 42px;
+    font-size: 64px;
     line-height: 1.2;
-    font-family: 'PP Neue Machina', sans-serif;
+    font-family: 'Safiro', sans-serif;
     margin-bottom: 16px;
 }
 
@@ -48,14 +30,22 @@ h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
-    font-family: 'PP Neue Machina', sans-serif;
-}
+    font-family: 'Safiro', sans-serif;
 
 h3 {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
     font-family: 'IBM Plex Mono', monospace;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    letter-spacing: 20%;
 }
 
 p {
@@ -113,7 +103,7 @@ button:hover svg {
 }
 
 section {
-    margin-top: 164px;
+    margin-top: 280px;
 }
 
 .hero{
@@ -547,4 +537,4 @@ section {
 .navbar .button-secondary {
     padding: 8px 16px;
     font-size: 14px;
-}
+}}
