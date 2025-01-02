@@ -19,6 +19,17 @@ document.querySelectorAll('.values-button').forEach(button => {
     });
 }); 
 
+const backgrounds = document.querySelectorAll('.hero-background');
+let currentIndex = 0;
+
+function cycleBackgrounds() {
+  backgrounds[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % backgrounds.length;
+  backgrounds[currentIndex].classList.add('active');
+}
+
+setInterval(cycleBackgrounds, 5000); // Change image every 5 seconds
+
 // Get the navbar and hero elements
 const navbar = document.querySelector('.navbar');
 const hero = document.querySelector('.hero');
