@@ -143,8 +143,12 @@ section {
   }
 
 .mission{
-    width: 60%;
+    width: 80%;
     align-items: flex-start;
+}
+
+.mission-content{
+    width: 70%;
 }
 
 .work{
@@ -195,9 +199,14 @@ section {
 }
 
 /* Third row */
-.image-grid-row:nth-child(3) img {
-    width: 50%;
+.image-grid-row:nth-child(3) img:first-child {
+    width: 70%;
 }
+
+.image-grid-row:nth-child(3) img:last-child {
+    width: 30%;
+}
+
 
 .image-grid img:hover {
     transform: scale(1.02);
