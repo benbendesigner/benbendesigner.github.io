@@ -16,6 +16,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+    margin-top: 120px;
 }
 
 h1 {
@@ -104,14 +105,12 @@ button:hover svg {
     background: rgba(255, 255, 255, 0.1);
 }
 
-section {
-    margin-top: 280px;
-}
-
 .hero{
     display: flex;
     flex-direction: column;
     gap: 64px;
+    margin-top: 240px;
+    margin-bottom: 360px;
 }
 
 .hero-background {
@@ -200,11 +199,11 @@ section {
 
 /* Third row */
 .image-grid-row:nth-child(3) img:first-child {
-    width: 70%;
+    width: 30%;
 }
 
 .image-grid-row:nth-child(3) img:last-child {
-    width: 30%;
+    width: 70%;
 }
 
 
@@ -248,9 +247,6 @@ section {
     gap: 20px;
 }
 
-.timeline-item:last-child {
-    margin-bottom: 40px;
-}
 
 .timeline-item-logo {
     position: relative;
@@ -303,20 +299,32 @@ section {
 .experience-misc {
     display: flex;
     flex-direction: row;
+    margin-top: 24px;
 }
 
 .experience-misc ul{
     width: 30%;
+
+
+}
+
+.experience-misc span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family:  'Safiro', sans-serif;
+}    
+
+.experience-misc li {
+    margin-top: 12px;
+    line-height: 1.5;
+    list-style:disc;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.5;
     font-family: 'IBM Plex Mono', monospace;
     font-style: italic;
     color: #A3A3A3;
-}
-
-.experience-misc li {
-    list-style:disc;
+    list-style-position: inside;
 }
 
 
