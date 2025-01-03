@@ -24,7 +24,7 @@ body {
     color: white;
     font-size: 48px;
     z-index: 1000;
-    text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
