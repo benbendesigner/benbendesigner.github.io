@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Safiro';
+    src: url('./public/fonts/safiro-medium-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,12 +24,11 @@ body {
     color: white;
     font-size: 48px;
     z-index: 1000;
-    pointer-events: none;
     text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 64px;
     line-height: 1.2;
     font-family: 'Safiro', sans-serif;
@@ -43,11 +49,10 @@ button {
     border-radius: 9999px;
     cursor: pointer;
     width: fit-content;
-    font-weight: 500;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.1s ease;
+    gap: 12px;
+    transition: transform 0.1s ease, background 0.3s ease;
 }
 
 button:active {
@@ -62,6 +67,23 @@ button svg {
 
 button:hover svg {
   transform: translateX(4px);
+}
+
+.button-circle:hover svg {
+    fill: black;
+    transform: none;
+}
+
+button:hover {
+    background: rgb(255, 255, 255); /* You can customize this */
+    color: rgb(0, 0, 0); /* New text color on hover */
+}
+
+.button-circle {
+    height: 55px;
+    width: 55px;
+    padding: 12px;
+    justify-content: center;
 }
 
 .image-container {
@@ -79,3 +101,4 @@ button:hover svg {
     object-fit: cover;
     border-radius: 1000px;
 }
+
