@@ -12,7 +12,6 @@ body {
     height: 100vh;
     width: 100vw;
     color: white;
-    padding-top: 5rem;
 }
 
 .content{
@@ -30,7 +29,7 @@ body {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-size: clamp(32px, 5vw, 64px);
+    font-size: 64px;
     line-height: 1.2;
     font-family: 'Safiro', sans-serif;
     margin-bottom: 64px;
@@ -147,8 +146,9 @@ button:hover {
 }
 
 article {
-    width: 80%;
+    width: 90%;
     max-width: 640px;
+    padding-bottom: 120px;
     margin: 120px auto;
     animation: fadeIn 0.8s ease-out;
 }
@@ -188,25 +188,18 @@ article > *:nth-child(4) { animation-delay: 0.4s; }
 }
 
 .nav-container {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    padding: 0.75rem 1.5rem;
-    background: rgba(23, 23, 23, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 2rem;
     align-items: center;
-    gap: 1rem;
 }
 
 .nav-logo {
@@ -221,25 +214,17 @@ article > *:nth-child(4) { animation-delay: 0.4s; }
     opacity: 0.8;
 }
 
-/* Base typography improvements */
-:root {
-    font-size: 16px; /* Base font size */
-}
 
-.intro-content {
-    max-width: 65ch; /* Optimal line length for readability */
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
 
-.intro-title {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font sizing */
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.intro-description {
-    font-size: clamp(1.125rem, 3vw, 1.25rem);
-    line-height: 1.6;
-    margin-bottom: 2rem;
+/* Mobile nav styles */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .nav-logo {
+        font-size: 1.1rem;
+    }
 }
