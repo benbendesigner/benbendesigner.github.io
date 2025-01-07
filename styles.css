@@ -33,7 +33,7 @@ h1 {
     font-size: clamp(32px, 5vw, 64px);
     line-height: 1.2;
     font-family: 'Safiro', sans-serif;
-    margin-bottom: 16px;
+    margin-bottom: 64px;
 }
 
 h2 {
