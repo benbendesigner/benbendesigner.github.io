@@ -123,6 +123,15 @@ button {
     align-items: center;
     gap: 12px;
     transition: transform 0.1s ease, background 0.3s ease;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Optional: Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(40px)) {
+    button {
+        background: rgba(10, 10, 10, 0.8);
+    }
 }
 
 button:active {
@@ -260,7 +269,7 @@ article > *:nth-child(4) { animation-delay: 0.4s; }
 
 .nav-logo {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Safiro', sans-serif;
     color: #fefefe;
     text-decoration: none;
