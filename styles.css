@@ -108,7 +108,7 @@ li a {
 button {
     position: relative;
     isolation: isolate;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: white;
