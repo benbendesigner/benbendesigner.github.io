@@ -108,6 +108,9 @@ li a {
 button {
     position: relative;
     isolation: isolate;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: white;
     padding: 12px 24px;
     font-family: 'IBM Plex Mono', monospace;
@@ -120,33 +123,41 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    border: 2px solid white;
-    transition: transform 0.1s ease, background 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
     overflow: hidden;
 }
 
 button::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 10, 10, 0.4);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
     z-index: -1;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
 }
 
-@supports not (backdrop-filter: blur(40px)) {
-    button::before {
-        background: rgba(10, 10, 10, 0.8);
+button:hover::before {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
 
+button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 button:active {
-  transform: scale(0.97);
-  background: rgba(255, 255, 255, 0.1);
+    transform: translateY(1px);
 }
 
 button svg {
@@ -161,11 +172,6 @@ button:hover svg {
 .button-circle:hover svg {
     fill: black;
     transform: none;
-}
-
-button:hover {
-    background: rgb(255, 255, 255); /* You can customize this */
-    color: rgb(0, 0, 0); /* New text color on hover */
 }
 
 .button-circle {
