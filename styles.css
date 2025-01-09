@@ -54,7 +54,7 @@ body {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(42px, 5vw, 64px);
     line-height: 1.2;
     font-weight: 500;
     font-family: 'Safiro', sans-serif;
@@ -106,10 +106,8 @@ li a {
 }
 
 button {
-    background: rgba(10, 10, 10, 0.4);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border: 2px solid white;
+    position: relative;
+    isolation: isolate;
     color: white;
     padding: 12px 24px;
     font-family: 'IBM Plex Mono', monospace;
@@ -122,14 +120,26 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    border: 2px solid white;
     transition: transform 0.1s ease, background 0.3s ease;
-    transform: translateZ(0);
-    will-change: transform;
+    overflow: hidden;
 }
 
-/* Optional: Fallback for browsers that don't support backdrop-filter */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    z-index: -1;
+}
+
 @supports not (backdrop-filter: blur(40px)) {
-    button {
+    button::before {
         background: rgba(10, 10, 10, 0.8);
     }
 }
@@ -316,7 +326,6 @@ article > *:nth-child(4) { animation-delay: 0.4s; }
     .nav-container {
         width: 90%;
         max-width: 640px;
-        padding: 1rem;
     }
 
     .nav-links {
