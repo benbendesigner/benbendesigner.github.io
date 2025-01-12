@@ -80,6 +80,11 @@ p {
     color: rgba(255, 255, 255, 0.85);
 }
 
+p a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
 strong {
     color: rgba(255, 255, 255, 1);
 }
