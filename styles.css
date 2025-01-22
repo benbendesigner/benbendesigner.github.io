@@ -314,66 +314,60 @@ article > *:nth-child(4) { animation-delay: 0.4s; }
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-    z-index: 1001;
-}
-
-.hamburger-line {
-    display: block;
+    padding: 0;
     width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
     height: 2px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
-/* Hamburger animation classes */
-.hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #000;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 100%;
-        max-width: 300px;
-        background: rgba(35, 35, 35, 0.95);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        right: 0;
+        display: flex;
     }
 
     .nav-container {
-        justify-content: space-between;
+        width: 90%;
+        max-width: 640px;
     }
 
-    .nav-content {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: calc(1rem + 50px);
+        left: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    button:last-child {
+        margin-bottom: 0;
     }
 
     .content {
