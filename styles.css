@@ -114,8 +114,8 @@ button {
     position: relative;
     isolation: isolate;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     color: white;
     padding: 12px 24px;
     font-family: 'IBM Plex Mono', monospace;
@@ -157,8 +157,8 @@ button:hover {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 button:active {
