@@ -18,6 +18,10 @@ body {
     align-items: center;
 }
 
+::selection {
+    background: #8D2CC1;
+  }
+
 .content {
     width: 80%;
     max-width: 890px;
