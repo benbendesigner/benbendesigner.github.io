@@ -10,7 +10,11 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ['Safiro', 'sans-serif'],
-        body: ['var(--font-ibm-plex-mono)', 'monospace'],
+        body: ['IBM Plex Mono', 'monospace'],
+      },
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
       },
     },
   },

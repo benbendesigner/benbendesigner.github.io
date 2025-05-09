@@ -33,13 +33,6 @@
   --font-body: 'IBM Plex Mono', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --background: #000000;
@@ -47,65 +40,65 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-ibm-plex-mono), var(--font-body);
-  margin: 0;
-  padding: 0;
-  font-style: italic;
-}
+@layer base {
+  body {
+    @apply bg-black text-white;
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+  }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: var(--font-heading);
-  font-style: normal;
-}
-
-.font-body {
-  font-family: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace !important;
-  font-style: italic;
-}
-
-.section {
-  margin-bottom: 4rem;
-}
-
-.featured-work {
-  margin-top: 3rem;
-}
-
-.project-entry {
-  margin-bottom: 2rem;
-}
-
-/* Floating navigation styles */
-.floating-nav {
-  transition: all 0.3s ease;
-}
-
-.floating-nav.scrolled {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Hero text styles */
-.hero-text {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: "kern" 1, "liga" 1;
-}
-
-@media (max-width: 768px) {
-  .hero-text {
-    font-size: 48px;
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    font-style: normal;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@layer components {
+  .font-body {
+    font-family: var(--font-body) !important;
+    font-style: italic;
+  }
+
+  .section {
+    @apply mb-16;
+  }
+
+  .featured-work {
+    @apply mt-12;
+  }
+
+  .project-entry {
+    @apply mb-8;
+  }
+
+  .floating-nav {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .floating-nav.scrolled {
+    @apply py-2 bg-black/80 backdrop-blur-xl shadow-lg;
+  }
+
   .hero-text {
-    font-size: 64px;
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 768px) {
+    .hero-text {
+      @apply text-5xl;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .hero-text {
+      @apply text-6xl;
+    }
   }
 }

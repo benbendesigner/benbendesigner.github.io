@@ -7,6 +7,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-ibm-plex-mono',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexMono.variable} antialiased`}>
+    <html lang="en" className="dark">
+      <body className={`${ibmPlexMono.variable} font-body antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>
