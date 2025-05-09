@@ -78,7 +78,7 @@
   }
 
   .floating-nav.scrolled {
-    @apply py-2 bg-black/80 backdrop-blur-xl shadow-lg;
+    @apply py-2 bg-opacity-80 bg-black backdrop-blur-xl shadow-lg;
   }
 
   .hero-text {
