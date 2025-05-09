@@ -100,6 +100,7 @@ export default function Photos() {
                   onError={() => handleImageError(photo)}
                   priority={index < 6}
                   quality={80}
+                  unoptimized
                 />
               </div>
             </AnimatedSection>

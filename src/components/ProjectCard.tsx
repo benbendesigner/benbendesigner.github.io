@@ -30,6 +30,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, categories, imageConte
               fill
               style={{ objectFit: 'cover' }}
               className={`transition-all duration-500 ${isHovering ? 'scale-105 blur-sm' : ''}`}
+              unoptimized
+              priority
             />
             
             {/* Coming Soon overlay - only visible on hover */}

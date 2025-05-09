@@ -41,7 +41,7 @@ const FloatingNav: React.FC<FloatingNavProps> = ({
         ${scrolled ? 'py-4 top-4' : 'py-6'} 
         rounded-full px-6
         transition-all duration-300 ease-in-out
-        backdrop-blur-md ${bgColor}
+        backdrop-blur-xl ${bgColor}
         border ${borderColor}
         shadow-lg
         max-w-3xl w-auto
@@ -49,23 +49,23 @@ const FloatingNav: React.FC<FloatingNavProps> = ({
     >
       <div className="mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className={`font-heading font-semibold text-md ${textColor}`}>
+          <div className={`font-heading font-semibold text-lg ${textColor}`}>
             BENBEN
           </div>
           
           <nav className="ml-12">
             <ul className="flex items-center space-x-2 md:space-x-3">
-              <li className={`text-xs italic font-body ${currentPage === 'design' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'design' ? '' : textColor} ${currentPage === 'design' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
+              <li className={`text-sm italic font-body ${currentPage === 'design' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'design' ? '' : textColor} ${currentPage === 'design' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
                 <a href="/" className={currentPage === 'design' ? (isDark ? 'text-black' : 'text-white') : ''}>Design</a>
               </li>
-              <li className={`text-xs italic font-body ${currentPage === 'photos' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'photos' ? '' : textColor} ${currentPage === 'photos' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
+              <li className={`text-sm italic font-body ${currentPage === 'photos' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'photos' ? '' : textColor} ${currentPage === 'photos' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
                 <a href="/photos" className={currentPage === 'photos' ? (isDark ? 'text-black' : 'text-white') : ''}>Photos</a>
               </li>
-              <li className={`text-xs italic font-body ${currentPage === 'writing' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'writing' ? '' : textColor} ${currentPage === 'writing' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
+              <li className={`text-sm italic font-body ${currentPage === 'writing' ? (isDark ? 'bg-white text-black' : 'bg-black text-white') : ''} px-4 py-2 rounded-full transition-colors cursor-pointer ${currentPage === 'writing' ? '' : textColor} ${currentPage === 'writing' ? 'hover:bg-opacity-90' : isDark ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}>
                 <a href="/writing" className={currentPage === 'writing' ? (isDark ? 'text-black' : 'text-white') : ''}>Writing</a>
               </li>
               <li 
-                className={`border ${isDark ? 'border-gray-700 text-white' : 'border-gray-600 text-black'} px-4 py-2 rounded-full text-xs italic font-body hover:bg-white/10 hover:border-white transition-colors cursor-pointer`} 
+                className={`border ${isDark ? 'border-gray-700 text-white' : 'border-gray-600 text-black'} px-4 py-2 rounded-full text-sm italic font-body hover:bg-white/10 hover:border-white transition-colors cursor-pointer`} 
                 onClick={() => window.location.href = 'mailto:hi@benbensorensen.com'}
               >
                 Contact
