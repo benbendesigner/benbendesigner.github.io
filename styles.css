@@ -1,0 +1,408 @@
+@font-face {
+    font-family: 'Safiro';
+    src: url('./public/fonts/safiro-medium-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::selection {
+    background: #8D2CC1;
+  }
+
+.content {
+    width: 80%;
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    color: white;
+    font-size: 48px;
+    z-index: 1000;
+    text-shadow: 2px 2px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+.content h1 {
+    animation: fadeSlideUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.content button {
+    animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: 'Safiro', sans-serif;
+    margin-bottom: 64px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-family: 'Safiro', sans-serif;
+    margin-bottom: 16px;
+    margin-top: 64px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 36px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+p a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+strong {
+    color: rgba(255, 255, 255, 1);
+}
+
+ul {
+    font-size: 18px;
+    line-height: 2;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 16px;
+    list-style: inside;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+li {
+    margin-bottom: 36px;
+}
+
+li a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+button {
+    position: relative;
+    isolation: isolate;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    color: white;
+    padding: 12px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 9999px;
+    cursor: pointer;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+button:hover::before {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button svg {
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+}
+
+.button-circle:hover svg {
+    fill: black;
+    transform: none;
+}
+
+.button-circle {
+    height: 55px;
+    width: 55px;
+    padding: 12px;
+    justify-content: center;
+}
+
+.moving-image {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+article {
+    width: 90%;
+    max-width: 640px;
+    padding-bottom: 120px;
+    margin: 120px auto;
+    animation: fadeIn 0.8s ease-out;
+    padding-top: calc(4rem + 60px); /* Additional space for fixed nav */
+}
+
+/* Add smooth loading animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Animate child elements with staggered delay */
+article > * {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+article > *:nth-child(1) { animation-delay: 0.1s; }
+article > *:nth-child(2) { animation-delay: 0.2s; }
+article > *:nth-child(3) { animation-delay: 0.3s; }
+article > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hide elements by default */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Show elements when .visible class is added */
+.fade-in.visible {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.nav-container {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    padding: .5rem;
+    border-radius: 50px;
+    background: rgba(35, 35, 35, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.117);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.6s ease-out forwards;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;    
+}
+
+.blog-container {
+    width: 90%;
+    max-width: 640px;
+    padding-bottom: 120px;
+    margin: 120px auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fefefe;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-button {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-logo {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Safiro', sans-serif;
+    color: #fefefe;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    padding-left: 1rem;
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 640px;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: calc(1rem + 50px);
+        left: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    button:last-child {
+        margin-bottom: 0;
+    }
+
+    .content {
+        width: 90%;
+        padding: 0 1rem;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.your-blurred-element {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

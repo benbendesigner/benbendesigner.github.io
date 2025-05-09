@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weekly Review April 14th, 2025 -- BenBen Blog</title>
+        <link rel="stylesheet" href="../reset.css">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="preload" href="../public/fonts/safiro-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+            <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+            <link rel="manifest" href="/favicon/site.webmanifest">
+            <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="theme-color" content="#1a1a1a">     
+    </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP2YT3PB45"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MP2YT3PB45');
+    </script>
+
+    <!-- Yes I am hand writing this blog, I'm not using a CMS. It's been fun -->
+
+    <body>
+        <nav class="nav-container">
+            <div class="nav-content">
+                <a href="../" class="nav-logo">BenBen</a>
+
+                <div class="nav-links">
+                    <a href="../blog">Writing</a>
+                    <a href="https://benben.darkroom.com" target="_blank">Photos</a>
+                    <a href="mailto:hi@benbensorensen.com">
+                        <button class="nav-button">
+                          <span>Let's Chat</span>
+                        </button>
+                      </a>
+                </div>
+            </div>
+        </nav>
+        <article>
+            <h1 class="fade-in">Weekly Review: April 14th, 2025</h1>
+            <p>Starting fresh after a dental appointment (remember to brush, everyone!), I'm looking at this week as a reset opportunity. It's been chaotic lately with shifting meeting schedules and project backlogs, so I'm hoping to make headway on some passion projects and kick off new initiatives.</p>
+        
+            <p>Thanks for all the LinkedIn feedback! I've felt a bit self-conscious posting there given the prevalence of clickbait, but I'm pleased it's already helping forge new connections.</p>
+            
+            <p>I've been working behind the scenes on my portfolio, though I keep vacillating on the direction. Some days I envision a minimalist, design-focused approach; other days I want a comprehensive hub featuring blog posts, side projects, and applications with design elements integrated throughout. To follow my own advice, I'm tackling this incrementally, starting with manageable tasks. First priority is upgrading from basic HTML/CSS to Next.js, which will provide better animation control and scalability.</p>
+            
+            <p>AI coding tools have revolutionized my workflow. While Cursor best meets my current needs, I'm also intrigued by Loveable's capabilities.</p>
+            
+            <p>Wishing everyone a productive week ahead!</p>
+
+            <ul>Project Status:
+                <li>P&B JV: Still in a bit of a lull</li>
+                <li>Pokemon: Hovering around 530 and still working on videos!</li>
+                <li>Someday (nameTBD): Setting aside time later this week to work on this 
+                </p></li>
+            </ul>
+            
+            <ul>Books:
+                <li>Started: <a href="https://swiftpress.com/book/radical-thinking/" target="_blank">Radical Thinking </a></li>
+            </ul>
+            <ul>Soundtrack:
+                <li><a href="https://www.youtube.com/watch?v=hUO-sRLotOI" target="_blank">I've been on an emo kick lately...</a></li>
+            </ul>
+
+            <p>Laters!</p>
+
+        </article>
+    </body>
+</html>
