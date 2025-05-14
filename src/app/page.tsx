@@ -24,36 +24,28 @@ export default function Home() {
       title: "Disney+ on Vision Pro",
       categories: "Disney+ • 2024 • Product & Systems",
       imagePaths: [
-        "/images/project_visionpro.png",
-        "/images/home-marvel.png",
-        "/images/home-doordash.png"
+        "/images/project_visionpro.png"
       ]
     },
     {
       title: "MyDisney System",
       categories: "Disney • 2023 • Product & Systems",
       imagePaths: [
-        "/images/project_mydisney.png",
-        "/images/home-doordash.png",
-        "/images/home-magicmirror.png"
+        "/images/project_mydisney.png"
       ]
     },
     {
       title: "Ordering Experience",
       categories: "Doordash • 2020 • Product Design",
       imagePaths: [
-        "/images/project_doordash.png",
-        "/images/home-magicmirror.png",
-        "/images/home-visionpro.png"
+        "/images/project_doordash.png"
       ]
     },
     {
       title: "Magic Mirror",
       categories: "Disney • 2022 • Design Tooling",
       imagePaths: [
-        "/images/project_magicmirror.png",
-        "/images/home-visionpro.png",
-        "/images/home-marvel.png"
+        "/images/project_magicmirror.png"
       ]
     }
   ];
